@@ -425,3 +425,42 @@ h1 em,h2 em { color:var(--electric); font-style:normal; }
 .footer { color:#fff; }
 .footer a,.footer b,.footer address { color:#fff; }
 .directory-groups { color:#171b21; }
+
+/* Responsive guardrails for every generated inner page. Kept last so the
+   desktop visual-system overrides cannot win against the mobile layout. */
+@media (max-width:980px) {
+  .area-page,.seo-page,.directory-page { width:100%; max-width:100%; min-width:0; overflow-x:clip; }
+  .site-header.area-header { width:100%; max-width:none; height:68px; padding:0 1rem; grid-template-columns:minmax(0,1fr) auto!important; gap:1rem; position:relative; top:auto; }
+  .site-header.area-header>.brand { justify-self:start; min-width:0; }
+  .site-header.area-header>.mobile-menu { display:block; justify-self:end; grid-column:2; }
+  .site-header.area-header>nav,.site-header.area-header>.header-call { display:none; }
+  .area-hero,.seo-hero { width:100%; max-width:100%; grid-template-columns:minmax(0,1fr); gap:2.25rem; padding:5.5rem 1.2rem 3.5rem; }
+  .area-hero-copy,.area-content>*,.local-seo-links>*,.local-intent-heading>* { min-width:0; }
+  .area-hero h1,.seo-hero h1 { overflow-wrap:anywhere; }
+  .area-status { width:100%; max-width:none; }
+  .area-content,.local-seo-links,.local-intent-heading { grid-template-columns:minmax(0,1fr); }
+  .area-callout { width:100%; }
+  .directory-hero,.directory-groups { width:100%; max-width:100%; }
+}
+
+@media (max-width:620px) {
+  .site-header.area-header { padding:0 .85rem; }
+  .site-header.area-header .brand-logo { width:48px; height:48px; }
+  .area-hero,.seo-hero { min-height:auto; padding:5rem 1rem 3rem; gap:1.7rem; }
+  .area-crumb { top:1.35rem; left:1rem; max-width:calc(100% - 2rem); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .area-hero h1,.seo-hero h1 { margin:.8rem 0 1.15rem; font-size:clamp(2.55rem,14vw,4rem); line-height:.9; }
+  .area-hero-copy>p,.seo-hero .area-hero-copy>p { font-size:.92rem; line-height:1.65; }
+  .area-hero .hero-actions,.seo-hero .hero-actions { width:100%; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:.55rem; }
+  .area-hero .primary-cta,.area-hero .secondary-cta,.seo-hero .primary-cta,.seo-hero .secondary-cta { width:100%; min-width:0; padding:.65rem .55rem; justify-content:center; font-size:.66rem; white-space:nowrap; }
+  .area-hero .primary-cta svg,.seo-hero .primary-cta svg { width:16px; }
+  .area-content,.local-seo-links,.local-intent-section,.nearby { padding-left:1rem; padding-right:1rem; }
+  .area-content article h2,.nearby h2,.local-seo-links h2,.local-intent-heading h2 { overflow-wrap:anywhere; }
+  .area-content aside,.district-neighborhood-list { padding:1.25rem; }
+  .area-callout { padding:2.2rem 1rem; }
+  .area-callout>a { max-width:100%; white-space:normal; }
+  .local-faq-list summary { grid-template-columns:34px minmax(0,1fr) 18px; gap:.55rem; font-size:.82rem; }
+  .local-faq-list p { margin-left:34px; }
+  .directory-hero { padding:4.5rem 1rem 3.5rem; }
+  .directory-groups { padding:3.5rem 1rem; }
+  .footer { width:100%; max-width:100%; }
+}
