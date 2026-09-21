@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+import { SeoDirectory } from "@/components/seo-directory";
+import { serviceAreas } from "@/lib/service-areas";
+export const metadata:Metadata={title:"Üsküdar Oto Çekici Hizmet Bölgeleri",description:"Üsküdar mahalleleri, İstanbul Anadolu Yakası ilçeleri ve Kocaeli geçiş noktalarında 7/24 oto çekici, oto kurtarma ve yol yardım."};
+export default function Page(){const districts=serviceAreas.filter(x=>x.type==="ilce");return <SeoDirectory eyebrow="ÜSKÜDAR VE ÇEVRESİ" title="HİZMET BÖLGELERİ" intro="Üsküdar mahalleleri, İstanbul Anadolu Yakası ilçeleri ve Kocaeli geçiş noktaları için oto çekici, oto kurtarma, akü takviyesi ve 7/24 yol yardım sayfalarına ulaşın." groups={districts.map(d=>({title:`${d.name} / ${d.province ?? "İstanbul"} hizmet noktaları`,links:[{name:`${d.name} Oto Çekici`,href:`/bolgeler/${d.slug}`,detail:"7/24 yol yardım ve oto kurtarma"},...serviceAreas.filter(x=>x.type==="mahalle"&&x.district===d.name).map(x=>({name:`${x.name} Oto Çekici`,href:`/bolgeler/${x.slug}`,detail:"Yerel çekici hizmeti"}))]}))}/>} 
