@@ -209,7 +209,9 @@ h1 em,h2 em { color:var(--red); font-style:italic; }
 .local-intent-heading { display:grid; grid-template-columns:1fr .75fr; gap:5rem; align-items:end; margin-bottom:3rem; }
 .local-intent-heading>p { color:#666; line-height:1.7; }
 .local-query-grid { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid #c8c2b7; border-left:1px solid #c8c2b7; }
-.local-query-grid span { min-height:68px; padding:1rem; display:flex; align-items:center; gap:.8rem; border-right:1px solid #c8c2b7; border-bottom:1px solid #c8c2b7; font-weight:800; text-transform:capitalize; }
+.local-query-grid a { min-height:68px; padding:1rem; display:flex; align-items:center; gap:.8rem; border-right:1px solid #c8c2b7; border-bottom:1px solid #c8c2b7; font-weight:800; color:var(--black); }
+.local-query-grid a:hover,.local-query-grid a:focus-visible { background:#e9e2d4; }
+.local-query-grid a svg { margin-left:auto; flex:none; color:var(--red); }
 .local-query-grid b { color:var(--red); font-size:.7rem; }
 .local-faq-list { margin-top:3rem; border-top:1px solid #c8c2b7; }
 .local-faq-list details { border-bottom:1px solid #c8c2b7; }

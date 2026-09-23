@@ -19,6 +19,8 @@ export const servicePages: SeoEntry[] = [
   { name:"Lüks ve Düşük Şasi Araç Taşıma", slug:"luks-arac-tasima", short:"Spor ve premium araçlar için hassas yükleme.", intro:"Alçak tampon, uzun dingil mesafesi ve hassas jantlara sahip araçlarda yükleme açısını düşürerek koruyucu ekipman kullanıyoruz.", bullets:["Düşük yükleme açısı","Jant ve tampon koruması","Kapalı otopark koordinasyonu"] },
 ];
 
+export const localServicePages = servicePages.filter((service) => ["oto-cekici", "oto-kurtarma", "yol-yardim", "aku-takviyesi"].includes(service.slug));
+
 export const problemPages: SeoEntry[] = [
   { name:"Şanzıman Kilitlendi", slug:"sanziman-kilitlendi", short:"Vites geçmeyen ve tekerleği dönmeyen araç için doğru yükleme.", intro:"Otomatik şanzıman arızasında aracı zorlayarak hareket ettirmek ek hasara neden olabilir. Tekerlek durumuna göre kaydırıcı veya ahtapot vinç kullanıyoruz.", bullets:["Aracı zorlamadan yükleme","Ahtapot aparat seçeneği","Yetkili servise transfer"] },
   { name:"Triger Koptu", slug:"triger-koptu", short:"Motoru yeniden çalıştırmadan servise güvenli nakil.", intro:"Triger arızası şüphesinde marşa tekrar basmak motor hasarını artırabilir. Aracı çalıştırmadan kasaya alıyoruz.", bullets:["Motoru çalıştırmadan yükleme","Servis koordinasyonu","Binek ve hafif ticari destek"] },
